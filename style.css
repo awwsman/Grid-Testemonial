@@ -1,0 +1,184 @@
+:root{
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+
+--font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body{
+  background-color: var(--Light-gray);  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+/* display: grid;
+grid-template-areas: 
+'grid1'
+'grid2'
+'grid3'
+'grid4'
+'grid5';  */
+
+}
+
+/* Grid properties */
+
+.grid1{
+    grid-area: grid1;
+}
+.grid2{
+    grid-area: grid2;
+}
+.grid3{
+    grid-area: grid3;
+}
+.grid4{
+    grid-area: grid4;
+}
+.grid5{
+    grid-area: grid5;
+   
+    
+}
+
+@media (min-width:1100px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 
+'grid1 grid1 grid2 grid5'
+'grid3 grid4 grid4 grid5';
+width: 90%;
+
+    }
+    
+}
+
+/* page stylings */
+.grid1,.grid2,.grid3,.grid4,.grid5{
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+}
+
+/* styling the profile related elements */
+.profile{
+    display: flex;
+}
+.profile img{
+    border-radius: 2rem;
+    border: 1px solid white;
+    transform: scale(0.8);
+}
+.profile .detail{
+    
+    margin-left: 1rem;
+    /* border: 1px solid white; */
+    margin-top: 0.5rem;
+}
+
+.profile .position{
+    opacity: 50%;
+}
+
+/*styling individual grid elements */
+.grid1{
+    background: url("bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-color: var(--Moderate-violet);
+    background-blend-mode:screen ;
+    color: var(--Light-gray);
+}
+
+.grid1 h1{
+    margin-top: 1rem;
+}
+.grid1 p{
+    /* font-size: 1.2rem; */
+    color: var(--Light-gray);
+    opacity: 70%;
+    margin-top: 1.5rem;
+}
+
+.grid2{
+    background-color: var(--Very-dark-grayish-blue);
+    color: var(--White);
+    /* width: min-content; */
+   
+    
+}
+.grid2 h1{
+    margin-top: 1rem;
+}
+
+.grid2 p{
+    color: var(--Light-gray);
+    margin-top: 1.5rem;
+}
+
+.grid3{
+    background-color: var(--White);
+    color: var(--Very-dark-grayish-blue);
+}
+
+.grid3 h1{
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+.grid3 p{
+    margin-top: 1.5rem;
+    
+}
+
+.grid4{
+    background-color: var(--Very-dark-blackish-blue);
+    color: var(--White);
+}
+
+.grid4 h1{
+    margin-top: 1rem;
+}
+.grid4 p{
+    color: var(--Light-gray);
+    margin-top: 1.5rem;
+}
+
+.grid5{
+    background-color: var(--White);
+    color: var(--Very-dark-grayish-blue);
+    
+
+}
+.grid5 h2{
+    margin-top: 1rem;
+    
+}
+
+.grid5 p{
+    margin-top: 1.5rem;
+    
+    
+   
+}
+
+p{
+    /* font-size: 1rem; */
+    line-height: 1.2rem;
+}
